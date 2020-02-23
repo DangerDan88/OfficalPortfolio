@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <main className="bg-black">
         {children}
         <div className="bg-black justify-center border-t-2">
-          <footer className="bg-black text-white flex justify-center border-t-2">
+          <footer className="bg-black text-white flex justify-center border-t-2 border-black p-4">
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
