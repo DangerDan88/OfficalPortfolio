@@ -27,7 +27,7 @@ const Contact = () => (
             Email:
             <input
               className="shadow appearance-none border rounded py-2 px-3 text-grey-darker"
-              type="text"
+              type="email"
               name="email"
             />
           </label>
