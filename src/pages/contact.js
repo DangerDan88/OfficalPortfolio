@@ -35,10 +35,12 @@ const Contact = () => (
         <div className="flex-wrap rounded-full">
           <label className="text-white font-bold md:text-right mb-1 md:mb-0">
             Message:
-            <textarea>
+            <textarea
               className="w-full shadow appearance-none border rounded py-5 px-5
-              text-grey-darker row-span-10" type="text" name="message"
-            </textarea>
+              text-grey-darker row-span-10"
+              type="text"
+              name="message"
+            ></textarea>
           </label>
         </div>
         <button
