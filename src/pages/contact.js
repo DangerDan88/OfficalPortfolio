@@ -6,7 +6,12 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact" />
     <div className="flex bg-black justify-center mx-auto">
-      <form className="flex-initial border-solid border-8 border-black shadow-lg">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        className="flex-initial border-solid border-8 border-black shadow-lg"
+      >
         <div className="flex-wrap rounded-full">
           <label className="block text-white font-bold md:text-right mb-1 md:mb-0 pr-4">
             Name:
@@ -44,6 +49,5 @@ const Contact = () => (
     </div>
   </Layout>
 )
-
 
 export default Contact
