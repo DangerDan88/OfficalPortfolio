@@ -7,10 +7,12 @@ const Contact = () => (
     <SEO title="Contact" />
     <div className="flex bg-black justify-center mx-auto">
       <form
-        name="contact"
+        form-name="contact"
         method="POST"
+        data-netlify="true"
         className="flex-initial border-solid border-8 border-black shadow-lg"
-      netlify>
+        netlify
+      >
         <div className="flex-wrap rounded-full">
           <label className="block text-white font-bold md:text-right mb-1 md:mb-0 pr-4">
             Name:
