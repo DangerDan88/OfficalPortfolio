@@ -7,12 +7,14 @@ const Contact = () => (
     <SEO title="Contact" />
     <div className="flex bg-black justify-center mx-auto">
       <form
-        form-name="contact"
-        method="POST"
+        name="contact"
+        method="post"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
         className="flex-initial border-solid border-8 border-black shadow-lg"
-        netlify
       >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <div className="flex-wrap rounded-full">
           <label className="block text-white font-bold md:text-right mb-1 md:mb-0 pr-4">
             Name:
