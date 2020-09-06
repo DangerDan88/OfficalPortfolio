@@ -1,20 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-//import Image from "../components/image"
 import SEO from "../components/seo"
-import profilepic from "../images/profilepic.jpeg"
-const HomePage = () => (
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
+const HomePage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
 
     <div className="bg-black px-4">
-      <h1 className="text-green-500 flex justify-center text-6xl">
-        {" "}
-        Daniel Osornio
-      </h1>
-      <img className="w-1/5" src={profilepic} alt="Daniel" />
+      <Img
+        className="w-1/5"
+        fluid={data.profilepic.childImageSharp.fluid}
+        alt="Daniel"
+      />
       <div className="text-green-500 font-bold text-xl mb-2">
         Welcome to my portfolio
         <br></br>
@@ -24,6 +23,7 @@ const HomePage = () => (
           href="https://www.linkedin.com/in/daniel-osornio-837547188/"
           target="_blank"
           className="text-red-500 text-xl"
+          rel="noopener noreferrer"
         >
           Linked In
         </a>
@@ -32,12 +32,13 @@ const HomePage = () => (
           href="https://github.com/DangerDan88"
           target="_blank"
           className="text-blue-500 text-xl"
+          rel="noopener noreferrer"
         >
           Github
         </a>
       </p>
 
-      <div className="max-w-3xl bg-black text-green-500 text-xl rounded-lg mx-auto my-16 p-16">
+      <div className="max-w-3xl bg-black text-white text-xl rounded-lg mx-auto my-16 p-16">
         <p>
           My name is Daniel Osornio I am 23 years old and currently studying to
           become a front end web developer. I have always been interested in
@@ -61,3 +62,16 @@ const HomePage = () => (
 )
 
 export default HomePage
+
+export const query = graphql`
+  query MyQuery {
+    profilepic: file(relativePath: { eq: "profilepic.jpeg" }) {
+      id
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

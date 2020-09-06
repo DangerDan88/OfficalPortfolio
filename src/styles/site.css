@@ -4,7 +4,16 @@
 
 @tailwind utilities;
 
-
 #menu-toggle:checked + #menu {
-    display:block;
+  display: block;
+}
+
+.breadcrumb .breadcrumb-item {
+  position: relative;
+}
+.breadcrumb .breadcrumb-item:first-child {
+  margin-left: 0 !important;
+}
+.breadcrumb .breadcrumb-item:not(:last-child):after {
+  content: "/";
 }

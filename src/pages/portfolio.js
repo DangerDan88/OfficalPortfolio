@@ -1,6 +1,4 @@
 import React from "react"
-//import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ReactFood from "../images/ReactFood.png"
@@ -8,6 +6,7 @@ import DB from "../images/DB.png"
 import battlehero from "../images/battlehero.png"
 import gify from "../images/Giphy.png"
 import TS from "../images/TS.png"
+
 const Portfolio = () => (
   <Layout>
     <SEO title="Portfolio" />
@@ -20,6 +19,7 @@ const Portfolio = () => (
               href="https://boring-aryabhata-d6c19e.netlify.com"
               target="_blank"
               className="text-green-500"
+              rel="noopener noreferrer"
             >
               Food Memory Game
             </a>
@@ -41,6 +41,7 @@ const Portfolio = () => (
               href="https://github.com/DangerDan88/unit-4-game"
               target="_blank"
               className="text-green-500"
+              rel="noopener noreferrer"
             >
               DBZ Crystal Collector
             </a>
@@ -63,6 +64,7 @@ const Portfolio = () => (
               href="https://battleheroes.io"
               target="_blank"
               className="text-green-500"
+              rel="noopener noreferrer"
             >
               BattleHeroes
             </a>
@@ -81,6 +83,7 @@ const Portfolio = () => (
           </p>
         </div>
       </div>
+
       <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg">
         <img className="w-full" src={gify} alt="Daniel" />
         <div className="px-6 py-4">
@@ -89,6 +92,7 @@ const Portfolio = () => (
               href="https://dangerdan88.github.io/jify/"
               target="_blank"
               className="text-green-500"
+              rel="noopener noreferrer"
             >
               Giphy Food Generator
             </a>
@@ -111,6 +115,7 @@ const Portfolio = () => (
               href="https://dangerdan88.github.io/Train-Scheduler/"
               target="_blank"
               className="text-green-500"
+              rel="noopener noreferrer"
             >
               Train Scheduler
             </a>
