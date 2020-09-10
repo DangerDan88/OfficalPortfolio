@@ -3,21 +3,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
 
 const HomePage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
 
     <div className="bg-black px-4">
-      <Img
-        className="w-1/5"
-        fluid={data.profilepic.childImageSharp.fluid}
-        alt="Daniel"
-      />
-      <div className="text-green-500 font-bold text-xl mb-2">
-        Welcome to my portfolio
-        <br></br>
-      </div>
       <p className="text-base">
         <a
           href="https://www.linkedin.com/in/daniel-osornio-837547188/"
@@ -25,7 +17,7 @@ const HomePage = ({ data }) => (
           className="text-red-500 text-xl"
           rel="noopener noreferrer"
         >
-          Linked In
+          <FaLinkedin size={28} />
         </a>
         <br></br>
         <a
@@ -34,27 +26,24 @@ const HomePage = ({ data }) => (
           className="text-blue-500 text-xl"
           rel="noopener noreferrer"
         >
-          Github
+          <FaGithub size={28} />
         </a>
       </p>
-
-      <div className="max-w-3xl bg-black text-white text-xl rounded-lg mx-auto my-16 p-16">
+      <div className="max-w-3xl bg-black text-gray-600 text-xl rounded-lg mx-auto my-16 p-16">
+        <div className="flex justify-center h-48 max-h-full mx-auto pb-2">
+          {" "}
+          <Img
+            className="w-1/5"
+            fluid={data.profilepic.childImageSharp.fluid}
+            alt="Daniel"
+          />
+        </div>
         <p>
-          My name is Daniel Osornio I am 23 years old and currently studying to
-          become a front end web developer. I have always been interested in
-          computers whether it be with computer games, video games and movies
-          such as The Matrix and Hackers also helped me make a decision to make
-          a jump and try to become a programmer. I figured the best way to be
-          able to accomplish this was with some schooling to be able to get my
-          foot in the door at my first tech job. I really wanted to do this
-          because I always have wanted to build a computer program that can be
-          useful for a variety of people. One other thing that really intrigued
-          me was the fact you have to always be learning to succeed in this
-          field as things are always changing which I liked the idea of keeping
-          stuff fresh. I believe technology should be accessible to everyone
-          regardless of background as myself I am coming from a non tech job
-          trying to make the transition. I enjoy working out and doing just
-          about anything active or outdoors life is about balance.
+          My name is Daniel Osornio I am a bootcamp graduate from the University
+          of Utah looking for job opportunities please take a look at my work
+          and contact to reach out I believe technology should be accessible to
+          everyone regardless of background as myself I am coming from a non
+          tech job trying to make the transition.
         </p>
       </div>
     </div>
@@ -68,7 +57,7 @@ export const query = graphql`
     profilepic: file(relativePath: { eq: "profilepic.jpeg" }) {
       id
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }

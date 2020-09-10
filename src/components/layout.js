@@ -28,8 +28,8 @@ const Layout = ({ children }) => {
 
       <main className="bg-black">
         {children}
-        <div className="bg-black justify-center border-t-2">
-          <footer className="bg-black text-white flex justify-center border-t-2 border-black p-4">
+        <div className="bg-black justify-center">
+          <footer className="bg-black text-purple-900 flex justify-center border-t-2 border-black p-4 pt-6">
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>

@@ -5,7 +5,7 @@ import "../styles/site.css"
 
 const Header = ({ siteTitle }) => (
   <div className="flex justify-center items-center bg-black">
-    <div className="card transition duration-300 ease-in-out hover:shadow-sm flex flex-col border m-5 rounded">
+    <div className="hover:shadow-sm flex flex-col border m-5 rounded">
       <h1 className="font-mono font-bold text-purple-900 text-lg leading-tight border-b p-3 px-5 my-0">
         Daniel's Portfolio
       </h1>
