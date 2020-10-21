@@ -9,7 +9,7 @@ const Portfolio = ({ data }) => (
     <SEO title="Portfolio" />
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg p-2 p-2">
           <Img fluid={data.reactfood.childImageSharp.fluid} alt="food game" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl border-purple-900 border-2 text-center mb-2 rounded-lg hover:bg-white">
@@ -31,7 +31,7 @@ const Portfolio = ({ data }) => (
             </p>
           </div>
         </div>
-        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg p-2">
           <Img fluid={data.dbpic.childImageSharp.fluid} alt="dragonball" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl border-purple-900 border-2 text-center mb-2 rounded-lg hover:bg-white">
@@ -54,17 +54,17 @@ const Portfolio = ({ data }) => (
             </p>
           </div>
         </div>
-        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg">
-          <Img fluid={data.battlehero.childImageSharp.fluid} alt="battlehero" />
+        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg p-2">
+          <Img fluid={data.LBT.childImageSharp.fluid} alt="learnbuildtype" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl border-purple-900 border-2 text-center mb-2 rounded-lg hover:bg-white">
               <a
-                href="https://battleheroes.io"
+                href="https://elated-torvalds-247cb0.netlify.app/"
                 target="_blank"
                 className="text-gray-600"
                 rel="noopener noreferrer"
               >
-                BattleHeroes
+                LearnBuildType
               </a>
             </div>
             <h1>Technologies used</h1>
@@ -72,16 +72,13 @@ const Portfolio = ({ data }) => (
               <ul className="list-disc text-gray-600">
                 <li>React</li>
                 <li>Custom API's</li>
-                <li>Socket.io</li>
-                <li>Node-mailer</li>
-                <li>SReact-spring</li>
-                <li>Passport authentication</li>
-                <li>Mongo DB</li>
+                <li>serverless functions</li>
+                <li>Auth0 authentication</li>
               </ul>
             </p>
           </div>
         </div>
-        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg p-2">
           <Img fluid={data.giphypic.childImageSharp.fluid} alt="food game" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl border-purple-900 border-2 text-center mb-2 rounded-lg hover:bg-white">
@@ -104,7 +101,7 @@ const Portfolio = ({ data }) => (
             </p>
           </div>
         </div>
-        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg p-2">
           <Img
             fluid={data.trainpic.childImageSharp.fluid}
             alt="train scheduler"
@@ -131,12 +128,12 @@ const Portfolio = ({ data }) => (
             </p>
           </div>
         </div>
-        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="flex-wrap lg:block lg:w-1/2 lg:relative max-w-sm rounded overflow-hidden shadow-lg p-2">
           <Img fluid={data.gphpic.childImageSharp.fluid} alt="gph" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl border-purple-900 border-2 text-center mb-2 rounded-lg hover:bg-white">
               <a
-                href="https://cranky-wright-a62db7.netlify.app/"
+                href="https://gpheq.com/"
                 target="_blank"
                 className="text-gray-600"
                 rel="noopener noreferrer"
@@ -161,7 +158,7 @@ export default Portfolio
 
 export const query = graphql`
   query {
-    battlehero: file(relativePath: { eq: "battlehero.png" }) {
+    LBT: file(relativePath: { eq: "learnbuild.png" }) {
       childImageSharp {
         fluid(fit: CONTAIN) {
           ...GatsbyImageSharpFluid

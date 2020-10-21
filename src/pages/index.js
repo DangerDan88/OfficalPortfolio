@@ -43,7 +43,8 @@ const HomePage = ({ data }) => (
           of Utah looking for job opportunities please take a look at my work
           and contact to reach out I believe technology should be accessible to
           everyone regardless of background as myself I am coming from a non
-          tech job trying to make the transition.
+          tech job trying to make the transition. I am open to opportunities
+          involving employment or freelance work.
         </p>
       </div>
     </div>
